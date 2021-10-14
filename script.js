@@ -1,9 +1,12 @@
-function squareSum(numbers) {
-    let squareArr = numbers.map(x => x * x);
-    let result = 0
-    squareArr.forEach(item => {
-        result += item
-
+let minNum = (arr) => {
+    let res = arr[0]
+    arr.map((el) => {
+        if (el < res) {
+            res = el
+        }
+        return res
     })
-    return result
+    return res
 }
+
+console.log(minNum([78,56,232,12,8]))
