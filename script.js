@@ -1,12 +1,11 @@
-let minNum = (arr) => {
-    let res = arr[0]
-    arr.map((el) => {
-        if (el < res) {
-            res = el
-        }
-        return res
+function sq(arr) {
+    // debugger
+    let res = 0
+    let newNum = arr.reduce((ac, el) => {
+        return ac += el
     })
-    return res
+     res = newNum / arr.length
+    return Math.floor(res)
 }
 
-console.log(minNum([78,56,232,12,8]))
+console.log(sq([5,5,5]))
